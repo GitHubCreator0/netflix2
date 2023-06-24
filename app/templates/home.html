@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ name }}</h1>
+    <h6>{{ text }}</h6>
+    {% for i in post %}
+        <h3>{{ i.title }} <a href="/post/{{ i.id }}">Go</a>
+            <a href="/del_post/{{ i.id }}">Delete</a></h3>
+    {% endfor %}
+{% endblock %}
